@@ -300,12 +300,15 @@ img {
     padding-bottom: 120px;
 }
 
+.container.portfol {
+    display: block;
+}
+
 /* Filter */
 
 .section-filter {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
     margin-bottom: 72px;
 }
 
@@ -333,7 +336,7 @@ img {
 
  /* Card-set */
 
-.card-content {
+ .card-content {
     padding: 32px 16px;
     border: 1px solid var(--secondary-color);
 }
