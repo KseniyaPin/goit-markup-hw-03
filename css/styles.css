@@ -44,8 +44,8 @@ img {
 .container {
     display: flex;
     width: 1158px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -62,9 +62,6 @@ img {
 /* logo */
 
 .logo {
-    padding-top: var(--indent);
-    padding-bottom: var(--indent);
-
     font-family: Raleway, sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -81,11 +78,12 @@ img {
 
 .main-nav {
     display: flex;
+    align-items: center;
 }
 
  .site-nav {
     display: flex;
-    margin-left: 40px;
+    margin-left: 76px;
  }
 
   .site-nav .item:not(:last-child) {
@@ -151,26 +149,24 @@ img {
 /* Hero */
 
 .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    
     background-color: var(--primary-text-color);
     text-align: center;
 }
 
 .hero-title {
+    max-width: 500px;
     margin-bottom: 48px;
+    margin-right: auto;
+    margin-left: auto;
+
     color: var(--bg-body);
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
-}
-
-.hero-block {
-    padding-top: 188px;
-    padding-bottom: 188px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-
 }
 
 /* Button */
@@ -195,18 +191,18 @@ img {
 }
 
 .button.primary:focus,
-.button.primary:hover,
-.button.filter:focus,
-.button.filter:hover {
+.button.primary:hover {
+        color: var(--bg-body);
+        background-color: var(--primary-color-dark);
+        border: 4px solid transparent;
+}
+
+.button-filter:focus,
+.button-filter:hover {
     color: var(--bg-body);
     background-color: var(--primary-color-dark);
+    border: 1px solid transparent;
 }   
-
-.button.filter {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-
-}
 
 /* section */ 
 
@@ -274,7 +270,7 @@ img {
 .title-text {
     color: var(--title-text-color);
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
@@ -285,13 +281,6 @@ img {
     padding: 0;
     margin: 0;
     margin-left: calc( -1 * var(--indent));
-}
-
-.item-card {
-    flex-basis: calk(100% / 3 - var(--indent));
-    margin-left: var(--indent);
-    margin-top: var(--indent);
-    margin-bottom: var(--indent);
 }
 
 .team-cards {
@@ -306,6 +295,11 @@ img {
 
 /* Portfolio */
 
+.section.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
 /* Filter */
 
 .section-filter {
@@ -313,7 +307,6 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
-    margin-top: 96px;
 }
 
 .section-filter .item {
@@ -324,20 +317,24 @@ img {
      margin-right: var(--indent);
  }
 
- .button.filter {
-     padding: 12px var(--indent);
+ .button-filter {
+    padding: 12px var(--indent);
 
-     font-weight: 500;
-     font-size: 16px;
-     color: var(--primary-text-color);
-     line-height: 1.5;
-     letter-spacing: 0.02em;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--primary-text-color);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    cursor: pointer;
  }
 
  /* Card-set */
 
 .card-content {
-     padding: 32px 16px;
+    padding: 32px 16px;
     border: 1px solid var(--secondary-color);
 }
 
@@ -347,21 +344,26 @@ img {
     text-align: center;
 }
 
+.item-card {
+    flex-basis: calc((100% - 2 * var(--indent))/ 3);
+}
+
  .card-set {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: calc(-1 * var(--indent));
-    margin-top: calc(-1 * var(--indent));
-    margin-bottom: 120px;
- }
+    padding: 0;
+    margin: 0;
+    column-gap: 24px;
+    row-gap: 48px;
+}
 
 /* Footer */
+
 .footer-page {
     background-color: var(--primary-text-color);
     color: var(--secondary-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-page .link,
@@ -370,10 +372,7 @@ img {
 }
 
 .text-block {
-    display: block;
-    max-width: calc(100% / 4 - var(--indent));
-    margin-top: 100px;
-    margin-bottom: 100px;
+    max-width: 264px;
 }
 
 .text-block .title-text {
